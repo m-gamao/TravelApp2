@@ -33,6 +33,8 @@ Models:
     - belongs_to :destination
     - belongs_to :itinerary
     - content
+
+    
 ________________________________________________________________________________________
 Progress Notes:
 
