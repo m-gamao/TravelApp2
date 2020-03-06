@@ -1,15 +1,22 @@
-Create a New Destination
+Create a New Itinerary
 
-<%= form_for (@destination) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  
-  <%= f.label :location %>
-  <%= f.number_field :location %>
-
-  <%= f.label :description %>
-  <%= f.number_field :description %>
-
-  <%= f.submit "Create Destination" %>
+<%= form_for (@itinerary) do |f| %>
+  <%= f.label :date_and_time %>
+  <%= f.date_time :date_and_time %>
+  <br>
+  <br>
+  <%= f.label :type %>
+  <%= f.collection_select :type_id, type.order(:name), :id, :name, include_blank: true %>
+  <br>
+  <br>
+  <%= f.label :destination %>
+  <%= f.text_field :destination %>
+  <br>
+  <br>
+  <%= f.label :budget %>
+  <%= f.text_field :budget %>
+  <br>
+  <br>
+  <%= f.submit "Create Itinerary" %>
 
 <% end %>

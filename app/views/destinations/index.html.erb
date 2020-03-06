@@ -4,13 +4,9 @@ Destinations Index
 <tbody>
   <% @destinations.each do |destination| %>
     <tr>
-        <td><%= link_to "Go on #{attraction.name}", attraction_path(attraction) %></td> 
+        <td><%= link_to "See Destination: #{destination.name}", destination_path(destination) %></td> 
         <% end %>  
     </tr> 
   <% end %>
 </tbody>
 </table>
-
-<% if current_user.admin %>
-<td><%= link_to "New Attraction", new_attraction_path(@attraction) %></td>
-<% end %>

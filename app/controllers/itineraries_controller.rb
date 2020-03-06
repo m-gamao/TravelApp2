@@ -4,7 +4,7 @@ class ItinerariesController < ApplicationController
   end
 
   def index
-    @itinerary = Itinerary.all
+    @itineraries = Itinerary.all
   end
 
   def show
