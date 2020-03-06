@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     #if @user.save, then log in, set the session for this user, 
     # and redirect to the WelcomeController
     session[:user_id] = @user.id
-    #redirect to user/show (_path means show)
+    #redirect to user/show 
     redirect_to user_path(@user)
   end
     

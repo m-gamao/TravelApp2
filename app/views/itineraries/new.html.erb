@@ -1,0 +1,15 @@
+Create a New Destination
+
+<%= form_for (@destination) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :location %>
+  <%= f.number_field :location %>
+
+  <%= f.label :description %>
+  <%= f.number_field :description %>
+
+  <%= f.submit "Create Destination" %>
+
+<% end %>
