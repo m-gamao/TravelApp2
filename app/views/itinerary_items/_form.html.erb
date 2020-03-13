@@ -1,0 +1,29 @@
+# <% if city.errors.any? %>
+#   <div id="error_explanation">
+#     <h2>
+#       <%= pluralize(city.errors.count, "error") %>
+#       prohibited this visit from being saved:
+#     </h2>
+
+#     <ul>
+#     <% city.errors.full_messages.each do |msg| %>
+#       <li><%= msg %></li>
+#     <% end %>
+#     </ul>
+#   </div>
+# <% end %>
+
+<%= form_for destination do |f| %>
+
+  Select an existing destination:  <%= f.collection_select(:destination_id, Destination.all, :id, :name, {prompt: true})  %>
+
+
+<%= f.fields_for :destination do |destination|%>
+
+  Or add a new : <%= destination.text_field :name %>
+  <% end %>
+
+
+    <br><br>
+  <%= f.submit "Save" %>
+<% end %>

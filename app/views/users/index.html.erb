@@ -1,0 +1,12 @@
+
+<h1> Index</h1>
+
+<table style="width:100%">
+<tbody>
+  <% @itineraries.each do |itinerary| %>
+    <tr>
+      <td><%= link_to "See Itinerary for: #{itinerary.name}", itinerary_path(itinerary)%></td>  
+    </tr> 
+  <% end %>
+</tbody>
+</table>

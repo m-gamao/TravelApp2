@@ -1,0 +1,17 @@
+Edit Your Trip
+
+Trip Name: <%= @trip.name %>
+
+  <%= form_for (@destination) do |f| %>
+    <%= f.label :start_date %>
+    <%= f.text_field :start_date %>
+    <br>
+    <br>
+    <%= f.label :end_date %>
+    <%= f.text_field :end_date %>
+    <br>
+    <br> 
+    <%= f.submit "Update Trip Info" %>
+  <% end %> 
+
+  

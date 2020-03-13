@@ -1,0 +1,16 @@
+
+<h1> Create a Trip </h1>
+<br>
+<% form_for (@trip) do |f| %>
+     <% f.label :name %>
+     <% f.text_string :start_date %>
+     <br>
+     <% f.label :end_date %>
+     <% f.text_field :end_date %>
+     </br>
+Select destination:
+<% f.collection_select :destination_id
+Add a new destination:
+     <% render partial %>
+<% f.submit “Create trip” %>
+<% end %>
