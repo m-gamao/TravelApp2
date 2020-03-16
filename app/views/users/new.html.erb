@@ -1,23 +1,10 @@
 <h1>Sign Up</h1>
-
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.label :username %>
-    <%= f.text_field :username, autofocus: true %>
-  </div>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div>
-    <%= f.submit "Sign up!" %>
-  </div>
+<h4>
+<%= form_for :user, url: '/users' do |f| %>
+  Username: <%= f.text_field :username %><br>
+  Email: <%= f.text_field :email %><br><br>
+  Password: <%= f.password_field :password %><br><br>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
 <% end %>
+</h4>
