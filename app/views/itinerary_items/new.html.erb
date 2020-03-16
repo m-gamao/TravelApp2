@@ -1,6 +1,6 @@
-Create a New Itinerary
+Create New Itinerary Item
 
-<%= form_for (@itinerary) do |f| %>
+<%= form_for (@itinerary)_item do |f| %>
   <%= f.label :date_and_time %>
   <%= f.date_time :date_and_time %>
   <br>
